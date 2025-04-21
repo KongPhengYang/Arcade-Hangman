@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuessingGameController">
+   <children>
+      <TextField fx:id="guess" layoutX="125.0" layoutY="177.0" onAction="#checkGuess" promptText="Type Here">
+         <font>
+            <Font name="Arcade Normal" size="25.0" />
+         </font>
+      </TextField>
+      <Text layoutX="42.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make a guess from 0 - 50" wrappingWidth="526.7655029296875">
+         <font>
+            <Font name="Arcade Normal" size="22.0" />
+         </font>
+      </Text>
+      <Text layoutX="48.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number guessing MiniGame">
+         <font>
+            <Font name="Arcade Normal" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="464.0" layoutY="188.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #990011;" text="Exit Game" textFill="WHITE">
+         <font>
+            <Font name="Arcade Normal" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="upArrow" fitHeight="240.0" fitWidth="243.0" layoutX="167.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/UpArrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="downArrow" fitHeight="240.0" fitWidth="243.0" layoutX="167.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/DownArrow.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="guessCounter" layoutX="389.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guess Counter: 0" wrappingWidth="179.24468994140625">
+         <font>
+            <Font name="Arcade Normal" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guesses Allowed: 5" wrappingWidth="193.60546875">
+         <font>
+            <Font name="Arcade Normal" size="13.0" />
+         </font>
+      </Text>
+      <Pane fx:id="winPane" layoutX="115.0" layoutY="80.0" prefHeight="331.0" prefWidth="379.0" style="-fx-background-color: #F5F5DC; -fx-border-color: black; -fx-border-width: 5;">
+         <children>
+            <ImageView fx:id="playerWon" fitHeight="147.0" fitWidth="194.0" layoutX="111.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@New%20Piskel%20(3).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="returnWinButton" layoutX="111.0" layoutY="206.0" mnemonicParsing="false" onAction="#returnWin" prefHeight="53.0" prefWidth="157.0" style="-fx-background-color: #990011;" text="Return" textFill="WHITE">
+               <font>
+                  <Font name="Arcade Normal" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="losePane" layoutX="115.0" layoutY="80.0" prefHeight="331.0" prefWidth="379.0" style="-fx-background-color: #F5F5DC; -fx-border-color: black; -fx-border-width: 5;">
+         <children>
+            <Button fx:id="returnLose" layoutX="100.0" layoutY="188.0" mnemonicParsing="false" onAction="#returnLose" prefHeight="60.0" prefWidth="179.0" style="-fx-background-color: #990011; -fx-border-color: black; -fx-border-width: 5;" text="GET OUT">
+               <font>
+                  <Font name="Arcade Normal" size="20.0" />
+               </font>
+            </Button>
+            <Text layoutX="28.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU LOSE" wrappingWidth="323.20000000000005">
+               <font>
+                  <Font name="Arcade Normal" size="38.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="startPane" prefHeight="638.0" prefWidth="600.0" style="-fx-background-color: #F5F5DC;">
+         <children>
+            <Text layoutX="107.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You Have 5 Guesses before a new number is generated and you have to try again!" wrappingWidth="386.4957275390625">
+               <font>
+                  <Font name="Arcade Normal" size="17.0" />
+               </font>
+            </Text>
+            <Text layoutX="17.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number Guessing MiniGame">
+               <font>
+                  <Font name="Arcade Normal" size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="195.0" layoutY="359.0" mnemonicParsing="false" onAction="#startGame" prefHeight="93.0" prefWidth="208.0" style="-fx-background-color: #990011;" text="Start Game" textFill="WHITE">
+               <font>
+                  <Font name="Arcade Normal" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
