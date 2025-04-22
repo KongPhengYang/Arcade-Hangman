@@ -20,7 +20,7 @@ Solve the word to **win the game**!
 
 ---
 
-### ⚙️ Setup Instructions
+### Setup Instructions
 
 #### Step 1: Download the Game Files
 Download all required files for the game from the provided link or repository.
@@ -33,4 +33,19 @@ Download all required files for the game from the provided link or repository.
    - Click on **Module Path** → **Add External JARs** → Select the **JavaFX SDK JARs**
 3. Go to **Run Configuration** → **Arguments**  
    Add the following to **VM arguments**:
+   --module-path /path/to/javafx-sdk-<version>/lib --add-modules javafx.controls,javafx.fxml
+   
+*(Replace `/path/to/javafx-sdk-<version>/lib` with the actual path to your SDK folder.)*
+
+#### Step 3: Launch the Game
+
+1. Load the project in Eclipse.
+2. Launch `TypingGame.java`.
+3. On the title screen, click **"Start Game"**.
+4. Select your difficulty: **Easy** or **Hard**.
+5. Begin typing when prompted.
+- Press **Enter** to submit your guess.
+- Click **"Try Again"** to retry with a new sentence.
+6. Use the **"Main Menu"** button to return to the title screen.
+
 
